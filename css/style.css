@@ -1,0 +1,697 @@
+        button,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        input,
+        select,
+        textarea {
+            font-size: 100%;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        a,
+        dd,
+        div,
+        dl,
+        i,
+        img,
+        input,
+        li,
+        p,
+        span,
+        ul {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        address,
+        cite,
+        dfn,
+        em,
+        i,
+        var {
+            font-style: normal;
+        }
+        /*============================================================================*/
+        
+        .content {
+            margin: 20px auto 0;
+            width: 1000px;
+            clear: both;
+        }
+        
+        .cf:after {
+            content: '';
+            display: block;
+            clear: both;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+        
+        .cf {
+            zoom: 1;
+        }
+        /*===============分类==================================================*/
+        
+        .mainleft {
+            width: 210px;
+            float: left;
+            background: #fff;
+        }
+        
+        .mainleft .leftf {
+            border: 1px solid #35b558;
+        }
+        
+        .mainleft .leftf .ftitle {
+            height: 45px;
+            padding: 0 32px;
+            line-height: 45px;
+            border-bottom: 1px solid #eeeeee;
+            color: #35b558;
+            font-size: 14px;
+        }
+        
+        .mainleft .leftf .boxf {
+            box-sizing: border-box;
+        }
+        
+        .mainleft .leftf .boxf ul {
+            position: relative;
+            width: 208px;
+        }
+        
+        .mainleft .leftf .boxf ul li {
+            width: 208px;
+            height: 37px;
+        }
+        
+        .mainleft .leftf .boxf ul li .boxmain {
+            cursor: pointer;
+            padding-left: 32px;
+            border-bottom: 1px solid #eeeeee;
+            background: url(../img/icon-more_cd68622.png) 186px center no-repeat;
+            background-size: 6px 10px;
+        }
+        
+        .mainleft .leftf .boxf ul li .boxmain>a {
+            line-height: 37px;
+            color: #666;
+            font-size: 12px;
+        }
+        /*.boxmain的HOVER效果*/
+        
+        .mainleft .leftf .boxf ul li:hover>.boxmain {
+            border-left: 1px solid #ddd;
+            border-right: none;
+            height: 38px;
+            width: 210px;
+            padding-left: 24px;
+            z-index: 1101;
+            -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .mainleft .leftf .boxf ul li .boxmain:hover>a {
+            display: inline-block;
+            width: 185px;
+            line-height: 37px;
+            color: green;
+            border-right: 3px solid gray;
+        }
+        
+        .mainleft .leftf .boxf ul li .boxmain .boxslist {
+            min-width: 401px;
+            min-height: 417px;
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+            background: #fff;
+            border: 1px solid #ddd;
+            position: absolute;
+            top: -45px;
+            left: 209px;
+            margin-left: -1px;
+            list-style: none;
+            padding-bottom: 30px;
+            float: left;
+            display: none;
+            z-index: 999;
+        }
+        
+        .mainleft .boxslist .blmain {
+            width: 400px;
+        }
+        
+        .mainleft .boxslist .blmain dl {
+            margin: 0 15px;
+            overflow: hidden;
+        }
+        
+        .mainleft .boxslist .blmain dl dt {
+            display: block;
+            border-bottom: 1px solid #f5f5f5;
+            height: 37px;
+            line-height: 45px;
+        }
+        
+        .mainleft .boxslist .blmain dl dd {
+            list-style: none;
+        }
+        
+        .mainleft .boxslist .blmain dl dd a {
+            height: 14px;
+            line-height: 14px;
+            margin-bottom: 10px;
+            margin-top: 5px;
+            padding: 0 7px;
+            color: #666;
+            display: inline-block;
+            font-size: 12px;
+            border-right: 1px solid #e0e0e0;
+            float: left;
+            white-space: nowrap;
+            font-weight: 400;
+        }
+        
+        .mainleft .boxslist .blmain dl dd a:last-child {
+            border-right: 0;
+        }
+        
+        .mainleft .lefts {
+            height: 45px;
+            padding: 0 32px;
+            line-height: 45px;
+            color: #35b558;
+            font-size: 14px;
+        }
+        
+        .mainleft .lefts:hover {
+            color: #35b558;
+            background: #fafafa url(../img/img-seeall_b965178.png) no-repeat 160px center;
+            background-size: 40px 10px;
+        }
+        /*以下是右边内容区域：*/
+        
+        .mainright {
+            width: 776px;
+            float: right;
+        }
+        
+        .rightnav {
+            background: #fff;
+            width: 776px;
+            height: 38px;
+        }
+        
+        .navall {
+            float: left;
+            height: 38px;
+            clear: both;
+        }
+        
+        .navtop {
+            float: left;
+            padding: 0 21px;
+            background: #fff;
+            border-right: 1px solid #f5f5f5;
+            font-size: 12px;
+            font-weight: 400;
+            cursor: default;
+            line-height: 38px;
+        }
+        
+        .navall>dl {
+            position: relative;
+            z-index: 10;
+            overflow: hidden;
+            float: left;
+            height: 36px;
+            margin: 0 1px 0 -1px;
+            white-space: nowrap;
+            line-height: 36px;
+        }
+        
+        .navall dl dt {
+            padding: 0 18px;
+            cursor: default;
+        }
+        
+        span,
+        p,
+        div {
+            box-sizing: border-box;
+        }
+        
+        .navall dl dt>.arrow {
+            position: relative;
+            display: inline-block;
+            margin-left: 5px;
+        }
+        
+        .navall dl dt>.arrow:before {
+            display: block;
+            width: 0!important;
+            height: 0!important;
+            padding: 0!important;
+            font-size: 0!important;
+            line-height: 0!important;
+            border: 5px solid transparent;
+            border-bottom-width: 0;
+            border-top-color: gray;
+            content: " ";
+        }
+        
+        .navall dl dt>.arrow:before {
+            position: absolute;
+            left: 1px;
+            bottom: 1px;
+            border-width: 4px;
+            border-bottom-width: 0;
+            border-top-color: #000;
+        }
+        
+        .navall dl:hover dt>.arrow:before {
+            visibility: hidden;
+        }
+        
+        .navall dl:hover {
+            height: auto;
+            overflow: visible;
+            background: #fff;
+            border: 1px solid #e4e4e4;
+            border-width: 0 1px 1px;
+            -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, .1);
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, .1);
+            z-index: 999;
+        }
+        
+        .navall dl dd {
+            position: relative;
+            z-index: 12;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-transition: all .1s ease .1s;
+            -moz-transition: all .1s ease .1s;
+            -ms-transition: all .1s ease .1s;
+            transition: all .1s ease .1s;
+        }
+        
+        .rightnav .navall>dl:hover dd {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .navall span {
+            color: gray;
+        }
+        
+        .navall dl dd a {
+            display: block;
+            padding: 0 32px 0 17px;
+            font-weight: 500;
+            color: gray;
+        }
+        
+        .navall dl dd a:hover {
+            color: #35B558;
+        }
+        
+        .previewMode {
+            float: right;
+        }
+        
+        .previewMode ul li {
+            position: relative;
+            float: left;
+            width: 36px;
+            height: 38px;
+            border-left: 1px solid #f5f5f5;
+            line-height: 36px;
+            text-align: center;
+            cursor: pointer;
+            -webkit-transition: background-color .2s;
+            -moz-transition: background-color .2s;
+            -ms-transition: background-color .2s;
+            transition: background-color .2s;
+        }
+        
+        .previewMode li.curr,
+        .previewMode li:hover {
+            background: #fff;
+        }
+        
+        .previewMode li .icon {
+            position: relative;
+            top: -1px;
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            vertical-align: middle;
+        }
+        
+        .previewMode li.kuai-icon .icon {
+            width: 14px;
+            background: url(../img/icon-kuai_3c1a8cf.png) no-repeat 0 0;
+            background-size: 14px;
+        }
+        
+        .previewMode li.list-icon .icon {
+            width: 19px;
+            background: url(../img/icon-list_6d9f87f.png) no-repeat center;
+            background-size: 16px 12px;
+        }
+        /*====*/
+        /*加.lesson-list类*/
+        
+        .rightcontent {
+            width: 776px;
+            height: 400px;
+            margin-top: 15px;
+        }
+        
+        .lesson-list.rightcontent {
+            width: 776px;
+            height: auto;
+            margin-top: 15px;
+        }
+        
+        .rightcontent ul {
+            width: auto;
+        }
+        
+        .rightcontent ul li {
+            width: 250px;
+            /*height: 255px;*/
+            margin: 0 13px 13px 0;
+            float: left;
+            background: #fff;
+        }
+        
+        .lesson-list.rightcontent ul li {
+            width: 100%;
+            height: auto;
+            margin: 0 13px 13px 0;
+            float: none;
+            background: #fff;
+        }
+        
+        .rightcontent ul li:nth-child(3n+3) {
+            margin-right: 0;
+        }
+        
+        .rightcontent .lessonimg-box {
+            float: left;
+            width: 250px;
+            height: 135px;
+            position: relative;
+        }
+        
+        .lessonlist.rightcontent .lessonimg-box {
+            float: left;
+            width: 250px;
+            height: auto;
+            position: relative;
+        }
+        
+        .rightcontent .lessonimg-box .lessonimg {
+            width: 100%;
+            height: 135px;
+        }
+        
+        .rightcontent .lessonplay {
+            background: rgba(0, 0, 0, .4);
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .rightcontent .lessonplay .playericon {
+            position: absolute;
+            z-index: 120;
+            width: 50px;
+            height: 50px;
+            display: block;
+            left: 50%;
+            margin-left: -25px;
+            top: 50%;
+            margin-top: -25px;
+            background: url(../img/player_icon_5c67475.png) 0 0 no-repeat;
+            cursor: pointer;
+            background-size: 50px 50px;
+        }
+        
+        .rightcontent .lesson-infor {
+            padding: 10px;
+            position: relative;
+            z-index: 200;
+            height: auto;
+            overflow: hidden;
+            background: #fff;
+        }
+        
+        .lesson-list.rightcontent .lesson-infor {
+            width: 65%;
+            float: left;
+            padding: 10px;
+            position: relative;
+            z-index: 200;
+            height: auto;
+            overflow: hidden;
+            background: #fff;
+        }
+        
+        .rightcontent .lesson-info-h2 {
+            font-size: 14px;
+            color: #333;
+            line-height: 18px;
+            margin-bottom: 12px;
+            height: 36px;
+            overflow: hidden;
+            font-weight: 300;
+        }
+        
+        .rightcontent .lesson-infor p {
+            color: gray;
+            font-size: 12px;
+            line-height: 18px;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            margin-bottom: 10px;
+            display: none;
+        }
+        
+        .lesson-list.rightcontent .lesson-infor p {
+            color: gray;
+            font-size: 12px;
+            height: 36px;
+            line-height: 36px;
+            overflow: hidden;
+            opacity: 1;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .timeandicon {
+            font-size: 12px;
+            color: gray;
+            position: relative;
+        }
+        
+        .rightcontent .timeandicon dl {
+            width: 120px;
+            float: left;
+            white-space: nowrap;
+        }
+        
+        .timeandicon dl dd {
+            font-size: 12px;
+            /*float: left;*/
+            display: inline-block;
+            margin-right: 15px;
+        }
+        
+        .mar-b8 {
+            margin-bottom: 8px;
+        }
+        
+        .mar-b8 span {
+            font-size: 12px;
+        }
+        
+        .rightcontent .lesson-infor .timeandicon dl dd span {
+            font-size: 12px;
+        }
+        
+        .rightcontent .conbox {
+            width: 250px;
+            height: 223px;
+        }
+        
+        .lesson-list.rightcontent .conbox {
+            width: 100%;
+            height: auto;
+        }
+        
+        .rightcontent .lesson-infor .timeandicon .time-icon {
+            background: url(../img/clok_a413ecf.png) 0 0 no-repeat;
+            width: 14px;
+            height: 14px;
+            display: block;
+            float: left;
+            margin-right: 8px;
+            background-size: 14px 14px;
+        }
+        
+        .lesson-infor .timeandicon .xinhao-icon2 {
+            background: url(../img/tow-ji_ec2b553.png) 0 0 no-repeat;
+            background-size: 14px 14px;
+            width: 14px;
+            height: 14px;
+            display: block;
+            float: left;
+            margin-right: 8px;
+        }
+        
+        .rightcontent .lesson-infor .timeandicon .learn-number {
+            float: right;
+            display: none;
+        }
+        
+        .lesson-list.rightcontent .lesson-infor .timeandicon .learn-number {
+            float: right;
+            display: inline-block;
+        }
+        
+        .lesson-list.rightcontent .lesson-infor .timeandicon .learn-number {
+            float: right;
+            display: inline-block;
+        }
+        
+        .rightcontent .lesson-infor .lessonicon-box {
+            position: absolute;
+            right: 0;
+            text-align: right;
+            bottom: 4px;
+        }
+        
+        .lesson-list.rightcontent .lesson-infor .lessonicon-box {
+            position: absolute;
+            right: 0px;
+            text-align: right;
+            bottom: 4px;
+            top: -93px;
+        }
+        
+        .rightcontent .lesson-infor .lessonicon-box a {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-left: 3px;
+        }
+        
+        .timeandicon .learn-number {
+            float: right;
+        }
+        
+        .lesson-hover {
+            background: #fff!important!
+        }
+        /*这里是底部分页样式*/
+        
+        #page-nav {
+            text-align: center;
+            margin-top: 17px;
+        }
+        
+        ul.pages {
+            display: block;
+            border: 0;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin: 10px 0 45px;
+            padding: 0;
+        }
+        
+        ul.pages li {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            border: 0;
+            line-height: 30px;
+            border: 1px solid #fff;
+            text-align: center;
+            font-size: 12px;
+            background: #fff;
+            color: gray;
+            border: 1px solid #e4e4e4;
+            cursor: pointer;
+        }
+        
+        ul.pages li.pgNext {
+            width: 50px;
+        }
+        
+        ul.pages li:nth-child(2) {
+            width: 72px;
+        }
+        
+        ul.pages li:hover {
+            line-height: 30px;
+            border: 1px solid #35B558;
+            color: #35B558;
+        }
+        
+        ul.pages li.pgEmpty {
+            border: 1px solid #f0f0f0;
+            color: #d9d6c3;
+            width: 50px;
+            cursor: default;
+        }
+        
+        ul.pages li.pgCurrent {
+            background: #35b558;
+            color: #fff;
+            border: 1px solid #35B558;
+        }
+        
+        ul.pages li.thpoint {
+            border: 0;
+            cursor: auto;
+            color: #000;
+            background: none!important;
+            margin-top: 3px;
+        }
+        
+        ul.pages li.thpoint {
+            border: 0;
+            cursor: auto;
+            color: #000;
+            background: none!important;
+            margin-top: 3px;
+        }
+        
+        ul.pages li.pagetotal {
+            width: 70px;
+        }
+        
+        ul.pages li.pagenow {
+            width: 100px;
+        }
+        
+        ul.pages li.go {
+            width: 32px;
+            height: 22px;
+            line-height: 22px;
+            margin-top: 6px;
+        }

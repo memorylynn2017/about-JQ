@@ -1,0 +1,843 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+span {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+
+/**
+* 非大面积文字排版网站通常不需要列表项，如果需要可单独设置
+*/
+
+ul,
+ol {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    /* 1 */
+    background-color: transparent;
+    /* 2 */
+    color: #333;
+    cursor: pointer;
+    outline: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 0;
+}
+
+span,
+i,
+img {
+    cursor: pointer;
+}
+
+.content:after,
+.banner:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    vertical-align: middle;
+}
+
+.clearfix {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    vertical-align: middle;
+}
+
+body {
+    background: #f5f5f5;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+/* 顶部*/
+
+header {
+    width: 100%;
+    margin: 0 auto;
+    height: 60px;
+    background: #ffffff;
+    border-bottom: 1px solid #f5f5f5;
+    z-index: 100;
+}
+
+#header nav {
+    width: 1000px;
+    margin: auto;
+    height: 60px;
+    position: relative;
+}
+
+header a.logo {
+    width: 109px;
+    display: block;
+    float: left;
+    margin: 10px 60px 0 0;
+}
+
+
+/* 导航条*/
+
+header .nav_bar {
+    width: 440px;
+    line-height: 60px;
+    float: left;
+}
+
+header .nav_bar .current {
+    color: rgb(53, 181, 88);
+}
+
+header .nav_bar ul {
+    width: 440px;
+    line-height: 60px;
+    height: 60px;
+}
+
+header .nav_bar ul li {
+    float: left;
+    line-height: 60px;
+    width: 120px;
+}
+
+header .nav_bar ul li.first-menu {
+    width: 78px;
+}
+
+header .nav_bar ul li i {
+    margin-right: 4px;
+}
+
+header .nav_bar i.arrow-icon {
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #c1c1c1;
+    border-left: 1px solid #c1c1c1;
+    transform-origin: 4px 4px;
+    display: inline-block;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+}
+
+header .nav_bar ul li:hover {
+    color: rgb(53, 181, 88);
+}
+
+header .nav_bar ul li:hover i.arrow-icon {
+    transition: ease-in .5s;
+    transform-origin: 0px 4px;
+    border-top: 1px solid rgb(53, 181, 88);
+    border-left: 1px solid rgb(53, 181, 88);
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+
+header .nav_bar .submenu {
+    width: 280px;
+    background: #ffffff;
+    box-sizing: border-box;
+    margin-top: 1px;
+    overflow: hidden;
+    position: absolute;
+    display: none;
+    padding-bottom: 8px;
+    z-index: 9999;
+}
+
+header .submenu a {
+    display: block;
+    line-height: 30px;
+    padding-left: 16px;
+}
+
+header .submenu span {
+    display: inline-block;
+    line-height: 30px;
+}
+
+header .nav_bar .school-list span {
+    padding-left: 16px;
+    background: #f5f5f5;
+    display: block;
+    margin: 8px 0;
+}
+
+header .nav_bar .submenu i {
+    background: url("../img/allicon.png") 0 0 no-repeat;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    background-size: 64px 64px;
+}
+
+header .nav_bar .submenu i.web-icon {
+    background-position: -14px -27px;
+}
+
+header .nav_bar .submenu i.wechat-icon {
+    background: url("../img/allicon4.png") 0 -60px no-repeat;
+    background-size: 16px 148px;
+    height: 16px;
+}
+
+header .nav_bar .submenu i.python-icon {
+    background: url("../img/allicon4.png") 0 -1px no-repeat;
+    background-size: 16px 148px;
+    height: 18px;
+    top: 6px;
+}
+
+header .nav_bar .submenu i.go-icon {
+    background: url("../img/allicon4.png") 0 -37px no-repeat;
+    background-size: 16px 148px;
+    height: 18px;
+    top: 6px;
+}
+
+header .nav_bar .submenu i.android-icon {
+    top: 1px;
+    background-position: -43px -13px;
+}
+
+header .nav_bar .submenu i.ios-icon {
+    background: url("../img/allicon4.png") 0 -81px no-repeat;
+    background-size: 16px 148px;
+    height: 18px;
+    top: 6px;
+}
+
+header .nav_bar li:hover .submenu {
+    display: block;
+}
+
+header .nav_bar .submenu a:hover {
+    color: rgb(53, 181, 88);
+}
+
+header .nav_bar .hy-list {
+    padding-top: 8px;
+}
+
+header .nav_bar .hy-list span {
+    float: right;
+    margin: 0;
+    color: #bbb;
+}
+
+header .nav_bar .hy-list a {
+    padding: 5px 10px 0 16px;
+}
+
+header .nav_bar .hy-list a:hover {
+    background: #f5f5f5;
+}
+
+header .nav_bar .submenu i.kck-icon {
+    background-position: 0px -13px;
+}
+
+header .nav_bar .submenu i.zylj-icon {
+    background-position: -43px 0px;
+}
+
+header .nav_bar .submenu i.zstx-icon {
+    background-position: -30px -13px;
+}
+
+header .nav_bar .submenu i.xl-icon {
+    background: url("../img/xlkc2.png") 0 0 no-repeat;
+    background-size: 12px 12px;
+}
+
+header .nav_bar .submenu i.bq-icon {
+    background-position: -15px -13px;
+}
+
+header .nav_bar .submenu i.hy-icon {
+    background-position: -16px 0px;
+}
+
+header .nav_bar .submenu i.jswd-icon {
+    background-position: 0px -27px;
+}
+
+header .nav_bar .submenu i.wiki-icon {
+    background-position: -29px -27px;
+}
+
+header .nav_bar .submenu i.sq-icon {
+    background-position: 0px 2px;
+}
+
+header .nav_bar .submenu i.zyxz-icon {
+    background-position: -30px 0px;
+}
+
+header .uses {
+    float: right;
+    line-height: 60px;
+    position: relative;
+    top: 0;
+    right: 2%;
+}
+
+header .uses span {
+    margin-left: 30px;
+}
+
+header .uses .search {
+    width: 17px;
+    height: 40px;
+    background: url("../img/search-icon.png") no-repeat;
+    background-size: 17px 17px;
+    display: inline-block;
+}
+
+header .uses .search:hover {
+    background: url("../img/search-icon2.png") no-repeat;
+    background-size: 17px 17px;
+}
+
+header .uses .tel {
+    width: 18px;
+    height: 40px;
+    background: url("../img/app-icon.png") no-repeat;
+    background-size: 18px 17px;
+    display: inline-block;
+}
+
+header .uses .tel:hover {
+    background: url("../img/app-icon2.png") no-repeat;
+    background-size: 18px 17px;
+}
+
+header .uses .tel .tel-box {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 5px;
+}
+
+header .uses .tel-box .top-icon {
+    position: absolute;
+    top: -8px;
+    right: 48px;
+}
+
+header .uses .tel-box img {
+    border-top: 1px solid #f5f5f5;
+    position: relative;
+    z-index: 999;
+}
+
+header .uses .tel:hover .tel-box {
+    display: block;
+}
+
+header .uses .use {
+    width: 16px;
+    height: 40px;
+    background: url("../img/login-icon.png") no-repeat;
+    background-size: 16px 17px;
+    display: inline-block;
+    margin-top: 22px;
+}
+
+header .use .use-box {
+    display: none;
+}
+
+header .use:hover .use-box {
+    display: block;
+}
+
+header .uses .submenu {
+    position: absolute;
+    width: 120px;
+    top: 0;
+    right: 0;
+    background: #ffffff;
+    box-sizing: border-box;
+    margin-top: 1px;
+    overflow: hidden;
+    padding-bottom: 8px;
+    z-index: 100;
+}
+
+header .uses .submenu a.uses-list1 {
+    display: inline-block;
+    padding: 0 14px 0 12px;
+}
+
+header .uses .submenu a.uses-list2 {
+    display: inline-block;
+    padding: 0 14px 0 12px;
+    width: 120px;
+}
+
+header .uses .submenu a:hover {
+    color: rgb(53, 181, 88);
+    ;
+}
+
+header .uses .submenu ul li {
+    margin-right: 4px;
+    line-height: 40px;
+}
+
+header .uses .top-icon {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    display: block;
+    position: absolute;
+    top: -11px;
+    right: 2px;
+    width: 15px;
+    height: 15px;
+    border-top: 1px solid #f5f5f5;
+    border-left: 1px solid #f5f5f5;
+    display: inline-block;
+    background: #fff;
+    z-index: 1000;
+}
+
+header .uses .submenu i {
+    background: url("../img/allicon2.png") 0 0 no-repeat;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    background-size: 64px 64px;
+}
+
+header .uses .submenu li:hover .uses-list2 {
+    background: #f5f5f5;
+}
+
+header .uses .submenu i.center-icon {
+    background-position: -16px -15px;
+}
+
+header .uses .submenu i.homepage-icon {
+    background-position: -45px -1px;
+}
+
+header .uses .submenu i.news-icon {
+    background-position: -16px -30px;
+}
+
+header .uses .submenu i.st-icon {
+    background-position: -30px -1px;
+}
+
+
+/*顶部结束*/
+
+
+/*=============================底部=============================================*/
+
+footer {
+    margin: 0 auto;
+    width: 100%;
+    background: #ffffff;
+    padding-bottom: 30px;
+}
+
+footer .fot-box {
+    width: 1000px;
+    margin: 0 auto;
+    height: 215px;
+    position: relative;
+    border-bottom: 1px solid #fcfbfb;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+footer .fot-box a.fot-img {
+    background: url("../img/jk-logo-footer.png") no-repeat;
+    width: 109px;
+    height: 40px;
+    background-size: 109px 40px;
+    display: block;
+}
+
+footer .fot-box .f-logo {
+    float: left;
+}
+
+footer .fot-box .f-logo>p {
+    color: #999999;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+footer .fot-box .f-link {
+    padding-left: 224px;
+}
+
+footer .fot-box dl dd {
+    font-size: 12px;
+    line-height: 30px;
+}
+
+footer .fot-box dl dd a {
+    color: #999999;
+}
+
+footer .fot-box dl {
+    width: 135px;
+    float: left;
+}
+
+footer .fot-box dl dt {
+    font-size: 14px;
+    line-height: 30px;
+    color: #999999;
+    font-weight: 500;
+}
+
+footer .fot-box .f-tel {
+    float: left;
+    margin-left: 82px;
+}
+
+footer .fot-box .f-tel>p {
+    color: #999999;
+}
+
+footer .fot-box .f-tel span {
+    color: #999999;
+    font-size: 12px;
+}
+
+footer .fot-box .f-tel .f-iphone,
+.f-android {
+    border: 1px solid #e6e6e6;
+    line-height: 30px;
+    width: 140px;
+    height: 30px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+footer .fot-box .f-tel .f-iphone img {
+    display: none;
+    position: absolute;
+    top: -100px;
+    right: 20px;
+}
+
+footer .fot-box .f-tel img {
+    width: 115px;
+    height: 153px;
+    background-size: 115px 153px;
+}
+
+footer .fot-box .f-tel .f-iphone:hover>img {
+    display: block;
+}
+
+footer .fot-box .f-tel .f-android img {
+    display: none;
+    position: absolute;
+    top: -59px;
+    right: 20px;
+}
+
+footer .fot-box .f-tel .f-android:hover>img {
+    display: block;
+}
+
+footer .fot-box .f-tel .f-iphone .iphone>i {
+    width: 30px;
+    height: 30px;
+    background: url("../img/icon-down-ios.png") no-repeat;
+    background-size: 30px 30px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+
+footer .fot-box .f-tel .f-android .android>i {
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+    background: url("../img/icon-down-and.png") no-repeat;
+    background-size: 30px 30px;
+    display: block;
+    float: left;
+}
+
+footer .ft-w {
+    width: 1000px;
+    margin: 10px auto 0;
+    text-align: center;
+    font-size: 12px;
+    color: #999999;
+    position: relative;
+}
+
+footer .ft-w a {
+    color: #999999;
+}
+
+footer .ft-w .ft-wb {
+    background: url("../img/icon-down-sina.png") no-repeat;
+    width: 20px;
+    height: 15px;
+    background-size: 20px 15px;
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+}
+
+footer .ft-w .ft-wx {
+    background: url("../img/icon-down-wechat.png") no-repeat;
+    width: 20px;
+    height: 15px;
+    background-size: 20px 15px;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0
+}
+
+footer .ft-w .ft-icon {
+    background: url("../img/cert.png") no-repeat;
+    width: 60px;
+    height: 22px;
+    background-size: 60px 22px;
+    display: block;
+    text-align: center;
+    margin: 10px auto 0;
+}
+
+.group {
+    width: 34px;
+    height: 103px;
+    position: fixed;
+    left: 86%;
+    bottom: 50px;
+    z-index: 9999;
+}
+
+.group .group-top {
+    background: #f7f7f7 url("../img/gotop.jpg") 0 0 no-repeat;
+    width: 34px;
+    height: 34px;
+    background-size: 34px;
+    display: block;
+}
+
+.group .group-top:hover {
+    background: url("../img/gotop2.jpg")0 0 no-repeat;
+    background-size: 34px;
+}
+
+.group .group-bottom {
+    background: #f7f7f7 url("../img/phone-1.png") center center no-repeat;
+    width: 34px;
+    height: 35px;
+    background-size: 12px 24px;
+    display: block;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.group .group-bottom>img {
+    display: none;
+    position: absolute;
+    width: 126px;
+    height: 159px;
+    left: -129px;
+    top: -38px;
+}
+
+.group .group-bottom:hover>img {
+    display: block;
+}
+
+
+/*=============================*/
+
+#header div,
+#header i {
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    font-family: Verdana, "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;
+}
+
+/*在JQ中执行，添加及删除.SCALE动画CSS3*/
+
+.scale {
+    transform-origin: right center;
+    -moz-transform-origin: right center;
+    display: block;
+    transform: scale(1, 1) !important;
+    opacity: 1!important;
+    animation: scalerun 0.8s ease normal;
+    -moz-animation: scalerun 2s line normal;
+    -webkit-animation: scalerun 0.8s ease normal;
+}
+
+#header .searchbox {
+    display: none;
+    transform: scale(0.1, 1);
+    -moz-transform: scale(0.1, 1);
+    opacity: 0;
+    height: 59px;
+    line-height: 59px;
+    width: 850px;
+    background: #fff;
+    position: absolute;
+    z-index: 11000;
+    top: 0;
+    right: 0;
+    white-space: normal;
+}
+
+#header .searchbox .close-icon {
+    width: 15px;
+    height: 15px;
+    margin-top: 22px;
+    cursor: pointer;
+    background: url(../img/close-icon.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+    z-index: 1200;
+}
+
+#header .search-icon {
+    background: url(../img/search-icon.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+    height: 17px;
+    width: 17px;
+    display: inline-block;
+}
+
+#header i#search-btn {
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    font-family: Verdana, "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;
+}
+
+#header .searchbox input {
+    width: 400px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    font-size: 12px;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+#header .searchbox .tagbox {
+    width: 300px;
+    text-align: right;
+    display: inline;
+    margin-right: 50px;
+    float: right;
+}
+
+#header .searchbox .tagbox a {
+    font-size: 12px;
+    color: #808080;
+    background: #f5f5f5;
+    padding: 3px 5px;
+    margin-left: 10px;
+}
+
+#header .searchbox input {
+    width: 400px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    font-size: 12px;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+#header #web_search_header {
+    border: none;
+    outline: none;
+}
+
+.use-box {
+    width: 120px;
+    height: 179px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    z-index: 999;
+}
+
+.nav .uses {
+    height: 60px;
+}
